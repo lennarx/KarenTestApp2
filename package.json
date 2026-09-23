@@ -1,0 +1,41 @@
+{
+  "name": "mediturnos",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "openapi": "node scripts/generate-openapi.mjs",
+    "predev": "npm run openapi",
+    "dev": "next dev",
+    "prebuild": "npm run openapi",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "pretypecheck": "npm run openapi",
+    "typecheck": "tsc --noEmit",
+    "seed": "tsx --env-file=.env.local scripts/seed.ts"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.117.1",
+    "bcryptjs": "^3.0.3",
+    "jose": "^6.2.12",
+    "next": "16.3.6",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "swagger-ui-react": "^5.33.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "@types/swagger-ui-react": "^5.18.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.6",
+    "swagger-jsdoc": "^6.3.0",
+    "tailwindcss": "^4",
+    "tsx": "^4.23.15",
+    "typescript": "^5"
+  }
+}

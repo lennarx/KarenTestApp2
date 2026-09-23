@@ -1,0 +1,21 @@
+{
+  "name": "mediturnos-selenium-tests",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tests automatizados de ejemplo (Selenium + Mocha + Chai) para MediTurnos",
+  "scripts": {
+    "test": "mocha \"tests/**/*.test.js\"",
+    "test:login": "mocha tests/login.test.js",
+    "test:reserva": "mocha tests/reserva.test.js",
+    "test:agenda": "mocha tests/agenda-profesional.test.js"
+  },
+  "mocha": {
+    "timeout": 60000,
+    "reporter": "spec"
+  },
+  "dependencies": {
+    "chai": "^4.5.0",
+    "mocha": "^12.0.2",
+    "selenium-webdriver": "^4.35.0"
+  }
+}
